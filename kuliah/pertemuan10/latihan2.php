@@ -1,7 +1,7 @@
 <?php
 //variabel tabel yang nanti harus ada karena semua proses/funsgi nanti di pindah ke functions.php .
 require 'functions.php'
-$pegawai= query("SELECT * FROM pegawai");
+$pegawai = query("SELECT * FROM pegawai");
 ?>
 
 <!DOCTYPE html>
