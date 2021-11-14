@@ -13,6 +13,10 @@ function query($query)
   //query data dari $conn(pemanggilan database ke php dan tabel
   $result = mysqli_query($conn, $query);
 
+  if (mysqli_num_rows($result) == 1) {
+    return mysqli_fetch_assoc($result);
+  }
+
   //mengubah data tadi menjadi array 
   $rows = []; //untuk memunculkan data di database membuuhkan array kosong
   while ($row = mysqli_fetch_assoc($result)) { //array kosong itu nanti diisi dengan array assosiative yang berisi string ex :[nama]

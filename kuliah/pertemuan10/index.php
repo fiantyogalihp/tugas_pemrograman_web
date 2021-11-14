@@ -22,9 +22,6 @@ $pegawai = query("SELECT * FROM pegawai");
       <th>no</th>
       <th>gambar</th>
       <th>nama</th>
-      <th>no induk</th>
-      <th>email</th>
-      <th>jurusan</th>
       <th>aksi</th>
     </tr>
     <?php $i = 1;
@@ -33,11 +30,8 @@ $pegawai = query("SELECT * FROM pegawai");
         <td><?= $i++; ?></td>
         <td><img src="img/<?= $m['gambar']; ?>" width="60"></td>
         <td><?= $m['nama']; ?></td>
-        <td><?= $m['no_induk']; ?></td>
-        <td><?= $m['email']; ?></td>
-        <td><?= $m['jurusan']; ?></td>
         <td>
-          <a href="">ubah</a> | <a href="hapus">hapus</a>
+          <a href="detail.php?id=<?= $m['id']; ?>">lihat detail</a>
         </td>
       </tr>
     <?php endforeach; ?>
